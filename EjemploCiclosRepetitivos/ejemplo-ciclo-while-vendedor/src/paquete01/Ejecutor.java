@@ -18,7 +18,7 @@ public class Ejecutor {
         boolean bandera;
         String opcion;
         Scanner entrada = new Scanner(System.in);
-
+       // entrada.useLocale(Locale.US);
         // Inicio de proceso iterativo 
         bandera = true;
         while (bandera) { // bandera == true

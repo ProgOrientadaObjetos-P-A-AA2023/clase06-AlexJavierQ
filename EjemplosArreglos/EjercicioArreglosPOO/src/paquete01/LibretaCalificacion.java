@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package paquete01;
-
+import paquete04.Colegio;
 /**
  *
  * @author reroes
@@ -15,15 +15,28 @@ public class LibretaCalificacion {
     private double promedio;
     private String promedioCualitativo;
     private double[] calificaciones;
-    // private Colegio c;
 
-    public LibretaCalificacion(String n, double[] c) {
+  
+     private Colegio cl;
+     
+
+    public LibretaCalificacion(String n, double[] c, Colegio cole) {
         estudiante = n;
         calificaciones = c;
+        cl = cole;
     }
-
+    
+   // public LibretaCalificacion(Colegio cl, Colegio ci) {
+        
+     //   cl = cl;
+       // ci = ci;
+    //}
+    
     public void establecerEstudiante(String n) {
         estudiante = n;
+    }
+  public void ObtenerColegio(Colegio cole) {
+        cole= cl;
     }
 
     public void establecerPromedio() {
@@ -80,11 +93,16 @@ public class LibretaCalificacion {
     public double[] obtenerCalificaciones() {
         return calificaciones;
     }
+public Colegio obtenerColegio(){
+    return cl;
+}
 
     @Override
     public String toString() {
         String cadena = "Libreta de Calificaciones\n";
-        cadena = String.format("%sNombre: %s\nCalificaciones:\n", cadena,
+        cadena = String.format("%sColegio: %s\nCiudad: %s\nNombre: %s\nCalificaciones:\n", cadena,
+                cl.obtenerNombre(),
+                cl.obtenerCiudad(),
                 obtenerEstudiante());
         // cadena = String.format("%sNombre: %s\nCalificaciones:\n", cadena,
         //        estudiante);

@@ -1,18 +1,23 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package paquete02;
-
+package paquete04;
 import java.util.Locale;
 import java.util.Scanner;
-
-public class Ejecutor {
-
+import paquete02.Vendedor;
+/**
+ *
+ * @author alexj
+ */
+public class principal {
     public static void main(String[] args) {
-        // variables para ingreso de datos
-        String nombre;
+       int contador = 1;
+
+        while (contador<= 3){
+            System.out.println(contador);
+        contador = contador +1;
+         String nombre;
         int edad;
         double sMinino;
         int autos;
@@ -63,4 +68,6 @@ public class Ejecutor {
         // el valor de cadena final
         System.out.printf("%s\n", cadenaFinal);
     }
+        }
+      
 }
